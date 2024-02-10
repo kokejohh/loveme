@@ -11,12 +11,8 @@ no.addEventListener('click', (e) => {
     yesTxt.style.fontSize = `${parseFloat(yesTxt.style.fontSize) * 1.25}rem`;
     noTxt.innerText = words[++indexWord % words.length];
     
-    if (indexWord % 2 == 0) {
-        question.classList.toggle('animate__shakeY');
-    }
-    if (indexWord > words.length - 1) {
-        no.remove();
-    }
+    if (indexWord % 2 == 0) { question.classList.toggle('animate__shakeY'); }
+    if (indexWord > words.length - 1) { no.remove(); }
 });
 
 yes.addEventListener('click', (e) => {
@@ -25,7 +21,7 @@ yes.addEventListener('click', (e) => {
 
     let body = document.querySelector('body');
     let img = document.createElement('img');
-    
+
     img.src = 'https://media.tenor.com/ZoZqWaSnN5UAAAAi/diwali-sparkles-stars.gif';
     img.style.position = 'fixed';
     img.style.top = 0;
@@ -35,7 +31,7 @@ yes.addEventListener('click', (e) => {
         body.classList.add('animate__animated', 'animate__bounceIn');
         let img = document.createElement('img');
         img.src = 'https://media.tenor.com/yUpYL9_ERj4AAAAi/peach-goma.gif';
-        img.style.width = '75%';
+        img.width = 250;
         body.innerHTML = '';
     
         let h1 = document.createElement('h1');
