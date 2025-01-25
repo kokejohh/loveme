@@ -7,8 +7,9 @@ let indexWord = 0;
 let no = document.querySelector('#no');
 let yes = document.querySelector('#yes');
 
+yesTxt.style.fontSize = ''+ getComputedStyle(yesTxt).fontSize;
 no.addEventListener('click', (e) => {
-    yesTxt.style.fontSize = `${parseFloat(yesTxt.style.fontSize) * 1.25}rem`;
+    yesTxt.style.fontSize = `${parseFloat(yesTxt.style.fontSize) * 1.2}px`;
     noTxt.innerText = words[++indexWord % words.length];
     
     if (indexWord % 2 == 0) { question.classList.toggle('animate__shakeY'); }
